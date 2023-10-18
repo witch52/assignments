@@ -1,0 +1,171 @@
+import tkinter as tk
+from tkinter import messagebox,Checkbutton,Label,Entry,Button,scrolledtext,Listbox
+
+
+from tkinter.ttk import Combobox,Progressbar
+
+
+
+
+
+
+def welcome():
+   messagebox.showinfo("hi","welcome to my tkinter page")
+def exit():
+   messagebox.showinfo("exit","are you sure")
+   window.destroy()
+window = tk.Tk()
+window.title("tkinter")
+
+
+
+
+
+
+label=tk.Label(window,text="tkinter")
+label.pack(pady=5)
+
+
+welcome_button = tk.Button(window,text="welcome",command=welcome)
+welcome_button.pack(pady=5)
+
+
+exit_button=tk.Button(window,text="exit",command=exit)
+exit_button.pack(pady=5)
+
+
+months =['january','february','march','april','may','june','july','august','september','october','november','december']
+combobox_label=Label(text="choose the mounth")
+combobox_label.pack(pady=5)
+combobox_1=Combobox(window,value=months)
+combobox_1.pack(pady=5)
+
+
+checkbutton_1=tk.Checkbutton(window,text="check me")
+checkbutton_1.pack(pady=5)
+
+
+
+
+
+
+
+
+def name():
+   Label(window,text=name_box.get()).pack(pady=5)
+
+
+
+
+
+
+
+
+
+
+
+
+label2=Label(text="enter your name")
+label2.pack(pady=5)
+name_box=Entry()#textvariable=name
+name_box.pack(pady=5)
+
+
+submit_button_name=Button(text="submit",command=name)
+submit_button_name.pack(pady=5)
+
+
+def branch():
+   Label(window,text=branch_box.get()).pack(pady=5)
+
+
+
+
+
+
+
+
+
+
+
+
+label3=Label(text="entere your branch")
+label3.pack(pady=5)
+branch_box=Entry()
+branch_box.pack(pady=5)
+
+
+submit_button_branch=Button(text="submit",command=branch)
+submit_button_branch.pack(pady=5)
+
+
+def year():
+   Label(window,text=year.get()).pack(pady=5)
+
+
+
+
+
+
+
+
+
+
+
+
+label4=Label(text="entere your year")
+label4.pack(pady=5)
+year=Entry()
+year.pack(pady=5)
+
+
+submit_button_year=Button(text="submit",command=year)
+submit_button_year.pack(pady=5)
+
+
+def step():
+   progressbar1['value'] += 20
+
+
+
+
+
+
+progressbar1=Progressbar(window,)
+progressbar1.pack(pady=5)
+button3 = tk.Button(window,text="button",command=step)
+button3.pack(pady=5)
+
+
+def submit():
+   messagebox.showinfo("address","your address is")
+labelscroll=Label(window,text="enter your address")
+labelscroll.pack(pady=5)
+
+
+scrolledtext1 = scrolledtext.ScrolledText(window,height=3,width=40)
+scrolledtext1.pack(pady=5)
+
+
+scroll_button=Button(text="submit",command=submit)
+scroll_button.pack(pady=5)
+
+
+
+
+list1 = Listbox(window,height=3)
+list1.pack(pady=5)
+
+
+
+
+list1.insert(0,"man")
+list1.insert(1,"female")
+list1.insert(2,"other")
+
+
+
+
+
+
+window.mainloop()
